@@ -4,7 +4,7 @@ import star from "../assets/star.svg"
 import heroimg from "../assets/heroimg.svg"
 const Hero = () => {
     return (
-        <div className="flex justify-between mt-[160px]">
+        <div className="flex justify-between mt-[160px] px-[88px] pb-[96px]">
             <div className="gap-[48px] flex flex-col  items-start flex-[.6]">
                 <div className=" flex flex-col gap-[24px]">
                     <h1 className=" font-semibold text-[64px]/[72px] text-[#1D2939] ">Uniting the world, <br />one video call at a time</h1>

@@ -6,7 +6,7 @@ import marvel from "../assets/marvelcomp.svg"
 import auto from "../assets/autocomp.svg"
 const Companies = () => {
   return (
-    <div className="flex flex-col gap-12 py-[96px] justify-center mx-auto w-full">
+    <div className="flex flex-col gap-12 py-[96px] justify-center mx-auto w-full px-[88px]">
         <p className=" font-medium text-xl/[30px] text-[#475467] text-center">Join 1,500+ companies already video conferencing the ClearLink way</p>
         <div className="flex justify-around items-center">
             <img src={shopify} alt="shopify" />
