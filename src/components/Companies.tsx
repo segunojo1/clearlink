@@ -3,7 +3,6 @@ import coinbase from "../assets/coinbasecomp.svg"
 import dropbox from "../assets/dropboxcomp.svg"
 import intercom from "../assets/Intercomcomp.svg"
 import marvel from "../assets/marvelcomp.svg"
-import auto from "../assets/autocomp.svg"
 const Companies = () => {
   return (
     <div className=" max-w-[1700px] flex flex-col gap-12 py-[96px] justify-center mx-auto w-full px-[88px]">
