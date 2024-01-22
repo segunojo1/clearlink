@@ -3,7 +3,7 @@ import arrow from "../assets/check-circle.svg"
 
 const Features = () => {
     return ( 
-        <div className="pl-[88px]  py-[96px] flex">
+        <div className="pl-[88px] max-w-[1700px] mx-auto py-[96px] flex md:flex-row flex-col gap-8">
             <div className="flex flex-col gap-[32px]">
                 <h1 className="text-[#101828] 2xl:text-5xl/[60px] text-3xl font-semibold">Ready to clear the path to perfect communication?</h1>
                 <div className="flex flex-col 2xl:gap-5 gap-2">

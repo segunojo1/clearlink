@@ -7,11 +7,19 @@ import github from "../assets/github.svg"
 import linkedin from "../assets/linkedin.svg"
 import twitter from "../assets/twitter.svg"
 import youtube from "../assets/youtube.svg"
+import { useEffect, useState } from "react"
 const Footer = () => {
+    const [year, setYear]:any = useState();
+    const gety = new Date().getFullYear();
+    console.log(gety);
+    useEffect(() => {
+        setYear(gety)
+    }, [])
+    
     return (
         <div className="">
 
-            <div className="flex gap-[50px] 2xl:gap-[100px] pt-[96px] pb-[48px] px-[88px] w-fit">
+            <div className="flex flex-col md:flex-row gap-[50px] 2xl:gap-[100px] pt-[96px] pb-[48px] px-[88px] w-fit max-w-[1700px] mx-auto">
                 <div className="flex flex-col gap-8 max-w-[350px]">
                     <img src={logo} alt="logo" className="w-[152px]" />
                     <p className="text-[#475467] font-normal text-lg">ClearLink is your gateway to effortless, high-quality video conferencing. Join us in shaping the future of communication!</p>
@@ -56,8 +64,8 @@ const Footer = () => {
                 </div>
             </div>
             <div className="bg-[#F9FAFB] py-12">
-                <div className="flex justify-between px-[88px]">
-                    <p className="text-[#667085] text-base font-normal">© 2023 ClearLink. All rights reserved</p>
+                <div className="flex flex-col md:flex-row justify-between px-[88px] max-w-[1700px] mx-auto">
+                    <p className="text-[#667085] text-base font-normal">© {year} ClearLink. All rights reserved</p>
                     <div className="flex gap-6">
                         <img src={linkedin} alt="linkedin" />
                         <img src={twitter} alt="twitter" />

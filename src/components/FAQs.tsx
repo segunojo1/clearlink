@@ -15,7 +15,7 @@ const FAQs = () => {
     }
 
     return (
-        <div className="flex px-[88px]  py-[96px]">
+        <div className="flex flex-col md:flex-row px-[88px]  py-[96px] max-w-[1700px] mx-auto">
             <div className="flex-[.5] flex flex-col items-start">
                 <p className=" text-[#175CD3] text-lg font-semibold mb-3">Support</p>
                 <h1 className=" text-5xl font-semibold mb-5">FAQs</h1>
