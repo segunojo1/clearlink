@@ -8,13 +8,16 @@ import { useState } from "react"
 import { reviews } from "../helpers/testimonial"
 const Testimonials = () => {
   const [tracker, setTracker] = useState(0);
-  const next = () => {
-    if (tracker == reviews.length - 1) {
-      setTracker(0)
-    }else{
-
-      setTracker((prev) => prev + 1)
-    }
+  const next = (e:any) => {
+    console.log(e.target);
+      if (tracker == reviews.length - 1) {
+        setTracker(0)
+      }else{
+  
+        setTracker((prev) => prev + 1)
+      }
+    
+    
   }
   const previous = () => {
     if (tracker == 0) {
@@ -24,6 +27,16 @@ const Testimonials = () => {
       setTracker((prev) => prev - 1)
     }
   }
+  const previousbtn = (e:any) => {
+    const activeElement = document.activeElement as HTMLElement | null;
+    if (e.keyCode == 13 || e.keyCode == 32) {
+      e.preventDefault();
+      if (activeElement && 'click' in activeElement) {
+        activeElement.click()
+      }
+    }
+  }
+  
   return (
     <div className="   p-24 bg-[#F9FAFB] ">
       <div className="flex md:flex-row flex-col gap-16 max-w-[1700px] mx-auto">
@@ -47,8 +60,8 @@ const Testimonials = () => {
             </div>
           </div>
           <div className="flex gap-8">
-            <img src={arrowleft} alt="arrow left" className=" border-[1px] border-[#D1E9FF] rounded-full p-4 cursor-pointer" onClick={previous}/>
-            <img src={arrowright} alt="arrow right" className=" border-[1px] border-[#D1E9FF] rounded-full p-4 cursor-pointer" onClick={next}/>
+            <img src={arrowleft} tabIndex={0} alt="arrow left" className=" border-[1px] border-[#D1E9FF] rounded-full p-4 cursor-pointer" onClick={previous} onKeyDown={previousbtn}/>
+            <img src={arrowright} tabIndex={0} alt="arrow right" className=" border-[1px] border-[#D1E9FF] rounded-full p-4 cursor-pointer" onClick={next} onKeyDown={previousbtn}/>
           </div>
         </div>
       </div>

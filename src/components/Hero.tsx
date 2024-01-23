@@ -12,9 +12,9 @@ const Hero = () => {
                 </div>
                 <div className="flex gap-5 items-center">
                     <button className="py-[16px] px-[28px] rounded-[100px] border-[1px] bg-[#175CD3] text-white font-semibold text-base btn">Start your free trial</button>
-                    <div className=" gap-3 flex items-center">
-                        <img src={bot} alt="bot" />
-                        <p className=" font-semibold text-lg">Discover AI assistant</p>
+                    <div className=" gap-3 flex items-center" tabIndex={0}>
+                        <img src={bot} alt="bot" /> 
+                        <p className=" font-semibold text-lg" >Discover AI assistant</p>
                     </div>
                 </div>
                 <div className="flex items-center gap-[16px]">
